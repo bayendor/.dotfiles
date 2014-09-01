@@ -1,0 +1,17 @@
+  Documentation:
+    Enabled: false
+  GlobalVars:
+    Enabled: false
+  SpecialGlobalVars:
+    Enabled: false
+  OpMethod:
+    Enabled: false
+
+  Style/GuardClause:
+    Enabled: false
+
+# Style/StringLiterals:
+#     EnforcedStyle: double_quotes
+#     SupportedStyles:
+#       - single_quotes
+#       - double_quotes

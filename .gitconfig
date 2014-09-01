@@ -1,0 +1,26 @@
+[user]
+	name = David Bayendor
+	email = dbayendor@gmail.com
+	initials = DB
+[credential]
+	helper = osxkeychain
+[push]
+	default = current
+[alias]
+	co = checkout
+  st = status
+  sub = submodule foreach git pull origin master
+[core]
+	editor = /usr/local/bin/mate -w
+	excludesfile = /Users/David/.gitignore_global
+[color]
+	ui = true
+	diff = auto
+	status = auto
+	branch = auto
+[diff]
+	tool = opendiff
+[merge]
+	tool = opendiff
+[git-tmbundle]
+	gitx-path = /Applications/GitX.app

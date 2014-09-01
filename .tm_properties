@@ -1,0 +1,13 @@
+# Hide log, vendor and tmp directories from search popups.
+
+myExtraExcludes = "log,vendor,tmp"
+excludeInFileChooser  = "{$excludeInFileChooser,$myExtraExcludes}"
+excludeInFolderSearch = "{$excludeInFolderSearch,$myExtraExcludes}"
+fileBrowserGlob  = "{*,.tm_properties,.htaccess}"
+
+[ "{Capfile,Gemfile,Gemfile.lock,Guardfile}" ]
+fileType         = source.ruby
+
+[ Procfile ]
+fileType         = source.yaml
+
