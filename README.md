@@ -4,18 +4,22 @@ Symlinks created with: `ln -s .dotfiles/.bash_profile ~/.bash_profile`
 
 Files stored here are:
 
-.bash_profile       - Shell settings
+.bash_profile           - Shell settings
 
-.gitconfig          - Git config
+.gemrc                  - Gem preferences
 
-.gitignore_global   - Git ignore preferences
+.git-completion-bash    - Git auto-complete file
 
-.irbrc              - IRB console config
+.gitconfig              - Git config
 
-.psqlrc             - Postgres console config
+.gitignore_global       - Git ignore preferences
 
-.railsrc            - Rails console config
+.irbrc                  - IRB console config
 
-.rubocop.yml        - Rubocop rules
+.psqlrc                 - Postgres console config
 
-.tm_properties      - Textmate preferences
+.railsrc                - Rails console config
+
+.rubocop.yml            - Rubocop rules
+
+.tm_properties          - Textmate preferences
