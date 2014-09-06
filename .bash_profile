@@ -15,7 +15,8 @@ export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH:/usr/lib"
 
-export PATH="./bin:$PATH" # support for rails bin stubs
+# support for rails bin stubs
+export PATH="./bin:$PATH"
 
 # git auto-completion
 source ~/.git-completion.bash
@@ -44,8 +45,8 @@ export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # binstub check
-rakec()   { type ./bin/rake >/dev/null; if [ $? -eq 0 ]; then ./bin/rake $*; else bundle exec rake $*; fi }
-railsc()  { type ./bin/rails >/dev/null; if [ $? -eq 0 ]; then ./bin/rails $*; else rails $*; fi }
+rakec() { type ./bin/rake >/dev/null; if [ $? -eq 0 ]; then ./bin/rake $*; else bundle exec rake $*; fi }
+railsc() { type ./bin/rails >/dev/null; if [ $? -eq 0 ]; then ./bin/rails $*; else rails $*; fi }
 
 # rails shortcuts
 rc() { railsc console $*; }
@@ -60,10 +61,11 @@ rkseed() { rakec db:seed; }
 rkdbm() { rakec db:migrate; }
 
 # command aliases
-alias ls='ls -FG'                 # show colors and added symbols
-alias la='ls -a'                  # show hidden
-alias lg='ls -g -h'               # show details
-alias grep='grep -n --color=auto' # adds color, line # to grep
+alias ls='ls -FG'                   # show colors and added symbols
+alias la='ls -a'                    # show hidden
+alias lg='ls -g -h'                 # show details
+alias grep='grep -n --color=auto'   # adds color, line to grep
+alias tmaftp='ftp 192.183.189.126'
 alias bex='bundle exec'
 alias bin='bundle install --binstubs'
 alias rvm='rbenv'
@@ -73,7 +75,6 @@ alias rvm='rbenv'
 alias ws='cd ~/workspace'
 alias tma='cd ~/workspace/tma'
 alias pv='cd ~/workspace/tmp/practical_vim'
-alias tmaftp='ftp 192.183.189.126'
-alias dvc='cd ~/workspace/dvc'
 alias prag='cd ~/workspace/dev/prag_prog_ruby'
 alias exio='cd ~/workspace/dev/exercism/ruby'
+alias turing='cd ~/workspace/turing'
