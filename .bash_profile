@@ -40,6 +40,19 @@ export CLICOLOR=1
 
 export PS1="\[\033[36m\][\w]\n\[\033[33m\]\$(parse_git_branch)\[\033[00m\] \$\[\033[00m\] "
 
+# give the fullpaths of files passed in argv or piped through stdin
+function fullpath {
+  ruby -e '
+    $stdin.each_line { |path| puts File.expand_path path }  if ARGV.empty?
+    ARGV.each { |path| puts File.expand_path path }         unless ARGV.empty?
+  ' "$@"
+}
+
+# Take you to the dir of a file in a gem. e.g. `2gem rspec`
+2gem () {
+  cd "$(dirname $(gem which $1))"
+}
+
 # environment variables
 export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -64,12 +77,20 @@ rkdbm() { rakec db:migrate; }
 alias ls='ls -FG'                   # show colors and added symbols
 alias la='ls -a'                    # show hidden
 alias lg='ls -g -h'                 # show details
+alias l="ls -lFGgohq"               # fancy ls
 alias grep='grep -n --color=auto'   # adds color, line to grep
 alias tmaftp='ftp 192.183.189.126'
-alias bex='bundle exec'
+alias be='bundle exec'
 alias bin='bundle install --binstubs'
 alias rvm='rbenv'
 
+# Git aliases
+alias gs="git status"
+alias gd="git diff --patience --ignore-space-change"
+alias gc="git checkout"
+alias gb="git branch"
+alias ga="git add"
+alias gh="git hist"
 
 # directory aliases
 alias ws='cd ~/workspace'

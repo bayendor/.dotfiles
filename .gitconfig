@@ -11,6 +11,9 @@
   st = status
   sub = submodule foreach git pull origin master
   ci = commit -m
+  shas = log --pretty=format:\"%H\"
+  hist = log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short
+  authors = ! git log --format=\"%ae %an\" | sort -u | column -t
 [core]
 	editor = /usr/local/bin/mate -w
 	excludesfile = /Users/David/.gitignore_global
@@ -25,4 +28,5 @@
 	tool = opendiff
 [git-tmbundle]
   gitx-path = /Applications/GitX.app
-
+[push]
+  default = upstream
