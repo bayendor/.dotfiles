@@ -1,6 +1,7 @@
 [user]
 	name = David Bayendor
 	email = dbayendor@gmail.com
+  username = bayendor
 	initials = DB
 [credential]
 	helper = osxkeychain
@@ -28,5 +29,3 @@
 	tool = opendiff
 [git-tmbundle]
   gitx-path = /Applications/GitX.app
-[push]
-  default = upstream
