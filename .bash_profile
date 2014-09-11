@@ -83,6 +83,7 @@ alias tmaftp='ftp 192.183.189.126'
 alias be='bundle exec'
 alias bin='bundle install --binstubs'
 alias rvm='rbenv'
+alias sib='seeing_is_believing'
 
 # Git aliases
 alias gs="git status"
