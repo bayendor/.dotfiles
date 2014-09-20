@@ -100,3 +100,4 @@ alias pv='cd ~/workspace/tmp/practical_vim'
 alias prag='cd ~/workspace/dev/prag_prog_ruby'
 alias exio='cd ~/workspace/dev/exercism/ruby'
 alias turing='cd ~/workspace/turing'
+
