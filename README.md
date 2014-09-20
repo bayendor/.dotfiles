@@ -1,6 +1,6 @@
 Dotfiles stored in `~/.dotfiles/`
 
-Symlinks created with: `ln -s .dotfiles/.bash_profile ~/.bash_profile`
+Symlinks created with: `ln -s .dotfiles/bash_profile ~/.bash_profile`
 
 Files stored here are:
 
@@ -8,13 +8,15 @@ Files stored here are:
 
 .gemrc                  - Gem preferences
 
-.git-completion-bash    - Git auto-complete file
+.git-completion.bash    - Git auto-complete file
 
 .gitconfig              - Git config
 
 .gitignore_global       - Git ignore preferences
 
 .irbrc                  - IRB console config
+
+.pryrc                  - Pry Ruby REPL config
 
 .psqlrc                 - Postgres console config
 
