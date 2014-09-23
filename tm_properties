@@ -11,3 +11,5 @@ fileType         = source.ruby
 [ Procfile ]
 fileType         = source.yaml
 
+[ **.rb ]
+saveOnBlur = true
