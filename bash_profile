@@ -21,7 +21,7 @@ export PATH="./bin:$PATH"
 # git auto-completion
 source ~/.git-completion.bash
 
-# enables 'git browse'
+# enables 'git hub'
 eval "$(hub alias -s)"
 
 # git prompt settings
