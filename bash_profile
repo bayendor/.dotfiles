@@ -78,7 +78,7 @@ alias ls='ls -FG'                   # show colors and added symbols
 alias la='ls -a'                    # show hidden
 alias lg='ls -g -h'                 # show details
 alias l="ls -lFGgohq"               # fancy ls
-alias grep='grep -n --color=auto'   # adds color, line to grep
+alias grep='ag'                     # because grep sucks
 alias tmaftp='ftp 192.183.189.126'
 alias be='bundle exec'
 alias bin='bundle install --binstubs'
