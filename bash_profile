@@ -16,7 +16,7 @@ export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH:/usr/lib"
 
 # support for rails bin stubs
-export PATH="./bin:$PATH"
+# export PATH="./bin:$PATH"
 
 # git auto-completion
 source ~/.git-completion.bash
@@ -30,7 +30,7 @@ git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 export -f parse_git_branch
 
-export EDITOR="/usr/local/bin/atom -w"
+export EDITOR="/usr/local/bin/mate -w"
 
 # ignore duplicates and spaced command in history
 export HISTCONTROL=ignoreboth
