@@ -13,6 +13,7 @@ eval "$(rbenv init -)"
 # support for postgres
 export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 
+# proper path ordering for bin files
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH:/usr/lib"
 
 # support for rails bin stubs
@@ -52,6 +53,9 @@ function fullpath {
 2gem () {
   cd "$(dirname $(gem which $1))"
 }
+
+# opens short URLs in browser
+function op { open http://$1; }
 
 # environment variables
 export LC_CTYPE=en_US.UTF-8
