@@ -104,3 +104,11 @@ alias pv='cd ~/workspace/tmp/practical_vim'
 alias prag='cd ~/workspace/dev/prag_prog_ruby'
 alias exio='cd ~/workspace/dev/exercism/ruby'
 alias turing='cd ~/workspace/turing'
+
+export NVM_DIR="/Users/David/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# browser aliases
+alias uni="open http://localhost:8080/; unicorn"
+alias web="open http://localhost:3000/; rails s" 
+
