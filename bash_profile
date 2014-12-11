@@ -101,7 +101,7 @@ alias gh="git hist"
 alias ws='cd ~/workspace'
 alias tma='cd ~/workspace/tma'
 alias pv='cd ~/workspace/tmp/practical_vim'
-alias prag='cd ~/workspace/dev/prag_prog_ruby'
+alias prag='cd ~/workspace/dev/prag_prog/blocks_course'
 alias exio='cd ~/workspace/dev/exercism/ruby'
 alias turing='cd ~/workspace/turing'
 
