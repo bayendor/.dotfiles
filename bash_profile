@@ -11,7 +11,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # support for postgres
-export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
+export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 
 # proper path ordering for bin files
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH:/usr/lib"
