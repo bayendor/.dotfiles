@@ -12,8 +12,9 @@ eval "$(rbenv init -)"
 
 # support for postgres
 export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
-
+export PGHOST=localhost
 # proper path ordering for bin files
+
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH:/usr/lib"
 
 # support for rails bin stubs
@@ -104,6 +105,7 @@ alias pv='cd ~/workspace/tmp/practical_vim'
 alias prag='cd ~/workspace/dev/prag_prog/blocks_course'
 alias exio='cd ~/workspace/dev/exercism/ruby'
 alias turing='cd ~/workspace/turing'
+alias pivot='cd ~/workspace/turing/projects/pivot'
 
 export NVM_DIR="/Users/David/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
