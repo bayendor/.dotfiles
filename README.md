@@ -22,6 +22,8 @@ Files stored here are:
 
 .railsrc                - Rails console config
 
+.rspec                  - RSpec config file
+
 .rubocop.yml            - Rubocop rules
 
 .tm_properties          - Textmate preferences
