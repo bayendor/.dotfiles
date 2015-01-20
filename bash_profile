@@ -106,10 +106,9 @@ alias gh="git hist"
 alias ws='cd ~/workspace'
 alias tma='cd ~/workspace/tma'
 alias pv='cd ~/workspace/dev/peertopeer/practical_vim'
-alias prag='cd ~/workspace/dev/prag_prog/blocks_course'
 alias exio='cd ~/workspace/dev/exercism/ruby'
 alias turing='cd ~/workspace/turing'
-alias pivot='cd ~/workspace/turing/projects/pivot'
+alias project='cd ~/workspace/turing/projects/thousand_words'
 
 
 # browser aliases
