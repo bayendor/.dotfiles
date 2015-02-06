@@ -1,3 +1,4 @@
 --skip-test-unit
 --database=postgresql
 
+--skip-spring
