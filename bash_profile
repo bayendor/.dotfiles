@@ -3,12 +3,8 @@
 #    source ~/.bashrc
 # fi
 
-### Added by the Heroku Toolbelt
+# Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
-# support for rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
 
 # support for postgres
 export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
@@ -20,6 +16,10 @@ export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH:/usr/lib"
 # support for nvm
 export NVM_DIR="/Users/David/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+# support for rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 # support for rails bin stubs
 # export PATH="./bin:$PATH"
@@ -36,28 +36,14 @@ git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 export -f parse_git_branch
 
-export EDITOR="mvim -f"
+export EDITOR="/usr/local/bin/mate -w"
 
 # ignore duplicates and spaced command in history
 export HISTCONTROL=ignoreboth
 
 # prompt
 export CLICOLOR=1
-
 export PS1="\[\033[36m\][\w]\[\033[33m\]\$(parse_git_branch)\[\033[00m\] \n\$\[\033[00m\] "
-
-# give the fullpaths of files passed in argv or piped through stdin
-function fullpath {
-  ruby -e '
-    $stdin.each_line { |path| puts File.expand_path path }  if ARGV.empty?
-    ARGV.each { |path| puts File.expand_path path }         unless ARGV.empty?
-  ' "$@"
-}
-
-# Take you to the dir of a file in a gem. e.g. `2gem rspec`
-2gem () {
-  cd "$(dirname $(gem which $1))"
-}
 
 # opens short URLs in browser
 function op { open http://$1; }
@@ -78,7 +64,6 @@ rg() { railsc generate $*; }
 # rake shortcuts
 rkr() { rakec routes; }
 rkt() { rakec test $*; }
-rktprep() { rakec db:test:prepare; }
 rkseed() { rakec db:seed; }
 rkdbm() { rakec db:migrate; }
 
@@ -92,7 +77,6 @@ alias tmaftp='ftp 192.183.189.126'
 alias be='bundle exec'
 alias bin='bundle install --binstubs'
 alias rvm='rbenv'
-alias sib='seeing_is_believing'
 
 # Git aliases
 alias gs="git status"
@@ -108,10 +92,5 @@ alias tma='cd ~/workspace/tma'
 alias pv='cd ~/workspace/dev/peertopeer/practical_vim'
 alias exio='cd ~/workspace/dev/exercism/ruby'
 alias turing='cd ~/workspace/turing'
-alias project='cd ~/workspace/turing/projects/thousand_words'
-
-
-# browser aliases
-alias uni="open http://localhost:8080/; unicorn"
-alias web="open http://localhost:3000/; rails s"
+alias project='cd ~/workspace/turing/projects/jetfuel'
 
