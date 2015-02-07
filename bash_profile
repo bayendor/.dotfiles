@@ -13,10 +13,6 @@ export PGHOST=localhost
 # proper path ordering for bin files
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH:/usr/lib"
 
-# support for nvm
-export NVM_DIR="/Users/David/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
 # support for rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
