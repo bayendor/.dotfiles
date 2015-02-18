@@ -6,6 +6,10 @@
 # Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+# Add nvm support
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
 # support for postgres
 export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 export PGHOST=localhost
