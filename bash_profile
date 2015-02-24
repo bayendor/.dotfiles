@@ -92,5 +92,5 @@ alias tma='cd ~/workspace/tma'
 alias pv='cd ~/workspace/dev/peertopeer/practical_vim'
 alias exio='cd ~/workspace/dev/exercism/ruby'
 alias turing='cd ~/workspace/turing'
-alias project='cd ~/workspace/tmp/js_sudoku'
+alias project='cd ~/workspace/turing/projects/feed_engine'
 
