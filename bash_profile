@@ -80,11 +80,7 @@ alias rvm='rbenv'
 
 # Git aliases
 alias gs="git status"
-alias gd="git diff --patience --ignore-space-change"
 alias gc="git checkout"
-alias gb="git branch"
-alias ga="git add"
-alias gh="git hist"
 
 # directory aliases
 alias ws='cd ~/workspace'
