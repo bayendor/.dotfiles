@@ -23,8 +23,8 @@ Style/CollectionMethods:
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#map-fine-select-reduce-size'
   Enabled: false
 
-# Style/StringLiterals:
-#   EnforcedStyle: double_quotes
-#   SupportedStyles:
-#     - single_quotes
-#     - double_quotes
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+  SupportedStyles:
+    - single_quotes
+    - double_quotes
