@@ -75,7 +75,7 @@ alias l="ls -lFGgohq"               # fancy ls
 alias grep='ag'                     # because grep sucks
 alias tmaftp='ftp 192.183.189.126'
 alias be='bundle exec'
-alias bin='bundle install --binstubs'
+alias bin='bundle install --binstubs .bundle/bin'
 alias rvm='rbenv'
 
 # Git aliases
