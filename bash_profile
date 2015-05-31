@@ -10,10 +10,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
-# support for postgres
-export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
-export PGHOST=localhost
-
 # proper path ordering for bin files
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH:/usr/lib"
 
