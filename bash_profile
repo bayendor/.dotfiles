@@ -6,19 +6,12 @@
 # Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# Add nvm support
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-
 # proper path ordering for bin files
-export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH:/usr/lib"
+export PATH="/usr/ocal/bin:/usr/local/sbin:~/bin:$PATH:/usr/lib"
 
 # support for rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-
-# support for rails bin stubs
-# export PATH="./bin:$PATH"
 
 # git auto-completion
 source ~/.git-completion.bash
@@ -48,21 +41,6 @@ function op { open http://$1; }
 export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# binstub check
-rakec() { type ./bin/rake >/dev/null; if [ $? -eq 0 ]; then ./bin/rake $*; else bundle exec rake $*; fi }
-railsc() { type ./bin/rails >/dev/null; if [ $? -eq 0 ]; then ./bin/rails $*; else rails $*; fi }
-
-# rails shortcuts
-rc() { railsc console $*; }
-rs() { railsc server $*; }
-rg() { railsc generate $*; }
-
-# rake shortcuts
-rkr() { rakec routes; }
-rkt() { rakec test $*; }
-rkseed() { rakec db:seed; }
-rkdbm() { rakec db:migrate; }
-
 # command aliases
 alias ls='ls -FG'                   # show colors and added symbols
 alias la='ls -a'                    # show hidden
@@ -71,8 +49,6 @@ alias l="ls -lFGgohq"               # fancy ls
 alias grep='grep -n --color=auto'   # adds color, line number
 alias tmaftp='ftp 192.183.189.126'
 alias be='bundle exec'
-alias bin='bundle install --binstubs .bundle/bin'
-alias rvm='rbenv'
 
 # Git aliases
 alias gs="git status"
