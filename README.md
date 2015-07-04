@@ -27,3 +27,6 @@ Files stored here are:
 .rubocop.yml            - Rubocop rules
 
 .tm_properties          - Textmate preferences
+
+.vimrc                  - Vim settings w/Vundle plugin manager
+
