@@ -13,6 +13,12 @@ export PATH="/usr/ocal/bin:/usr/local/sbin:~/bin:$PATH:/usr/lib"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# suport for docker-machine
+export DOCKER_TLS_VERIFY="1"
+export DOCKER_HOST="tcp://192.168.99.100:2376"
+export DOCKER_CERT_PATH="/Users/David/.docker/machine/machines/dev"
+export DOCKER_MACHINE_NAME="dev"
+
 # git auto-completion
 source ~/.git-completion.bash
 
@@ -59,4 +65,3 @@ alias ws='cd ~/workspace'
 alias tma='cd ~/workspace/tma'
 alias pv='cd ~/workspace/dev/peertopeer/practical_vim'
 alias exio='cd ~/workspace/dev/exercism/ruby'
-
