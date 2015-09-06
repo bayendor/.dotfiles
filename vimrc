@@ -87,7 +87,7 @@ map <C-l> <C-w>l
 set t_Co=256
 set number
 if has('gui_running')
-  set guifont=Menlo:h14
+  set guifont=Hack:h13
   silent! colorscheme solarized
   let g:test#strategy = 'iterm'
 else
