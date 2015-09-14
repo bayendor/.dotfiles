@@ -9,6 +9,11 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # proper path ordering for bin files
 export PATH="/usr/ocal/bin:/usr/local/sbin:~/bin:$PATH:/usr/lib"
 
+# support for pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
 # support for rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
