@@ -9,14 +9,14 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # proper path ordering for bin files
 export PATH="/usr/ocal/bin:/usr/local/sbin:~/bin:$PATH:/usr/lib"
 
-# support for pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
 # support for rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# support for pyenv
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
 
 # suport for docker-machine
 export DOCKER_TLS_VERIFY="1"
@@ -60,6 +60,7 @@ alias l="ls -lFGgohq"               # fancy ls
 alias grep='grep -n --color=auto'   # adds color, line number
 alias tmaftp='ftp 192.183.189.126'
 alias be='bundle exec'
+alias py3='python3'
 
 # Git aliases
 alias gs="git status"
