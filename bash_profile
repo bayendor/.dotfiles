@@ -60,7 +60,11 @@ alias l="ls -lFGgohq"               # fancy ls
 alias grep='grep -n --color=auto'   # adds color, line number
 alias tmaftp='ftp 192.183.189.126'
 alias be='bundle exec'
+
+# Python aliases
 alias py3='python3'
+alias pipup='pip list --outdated | cut -d ' ' -f1 | xargs -n1 pip install -U'
+alias pipup3='pip3 list --outdated | cut -d ' ' -f1 | xargs -n1 pip3 install -U'
 
 # Git aliases
 alias gs="git status"
