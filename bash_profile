@@ -63,8 +63,8 @@ alias be='bundle exec'
 
 # Python aliases
 alias py3='python3'
-alias pipup='pip list --outdated | cut -d ' ' -f1 | xargs -n1 pip install -U'
-alias pipup3='pip3 list --outdated | cut -d ' ' -f1 | xargs -n1 pip3 install -U'
+alias pipup="pip list --outdated | cut -d ' ' -f1 | xargs -n1 pip install -U"
+alias pipup3="pip3 list --outdated | cut -d ' ' -f1 | xargs -n1 pip3 install -U"
 
 # Git aliases
 alias gs="git status"
