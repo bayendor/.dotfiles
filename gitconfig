@@ -17,7 +17,7 @@
   authors = ! git log --format=\"%ae %an\" | sort -u | column -t
   mt = mergetool -t opendiff
 [core]
-	editor = mvim
+	editor = vim
 	excludesfile = /Users/David/.gitignore_global
 [color]
 	ui = true
