@@ -7,22 +7,19 @@
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # proper path ordering for bin files
-export PATH="/usr/ocal/bin:/usr/local/sbin:~/bin:$PATH:/usr/lib"
+export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH:/usr/lib"
 
 # support for rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # support for pyenv
-# export PYENV_ROOT="$HOME/.pyenv"
-# export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
-# suport for docker-machine
-export DOCKER_TLS_VERIFY="1"
-export DOCKER_HOST="tcp://192.168.99.100:2376"
-export DOCKER_CERT_PATH="/Users/David/.docker/machine/machines/dev"
-export DOCKER_MACHINE_NAME="dev"
+# aws auto-completion
+complete -C aws_completer aws
 
 # git auto-completion
 source ~/.git-completion.bash
@@ -49,8 +46,18 @@ export PS1="\[\033[36m\][\w]\[\033[33m\]\$(parse_git_branch)\[\033[00m\] \n\$\[\
 function op { open http://$1; }
 
 # environment variables
-export LC_CTYPE=en_US.UTF-8
-export LANG=en_US.UTF-8
+# export LC_CTYPE=en_US.UTF-8
+# export LANG=en_US.UTF-8
+
+# homebrew openssl support
+export CFLAGS="-I$(brew --prefix openssl)/include"
+export LDFLAGS="-L$(brew --prefix openssl)/lib"
+
+# suport for docker-machine
+export DOCKER_TLS_VERIFY="1"
+export DOCKER_HOST="tcp://192.168.99.100:2376"
+export DOCKER_CERT_PATH="/Users/David/.docker/machine/machines/dev"
+export DOCKER_MACHINE_NAME="dev"
 
 # command aliases
 alias ls='ls -FG'                   # show colors and added symbols
@@ -62,9 +69,8 @@ alias tmaftp='ftp 192.183.189.126'
 alias be='bundle exec'
 
 # Python aliases
-alias py3='python3'
 alias pipup="pip list --outdated | cut -d ' ' -f1 | xargs -n1 pip install -U"
-alias pipup3="pip3 list --outdated | cut -d ' ' -f1 | xargs -n1 pip3 install -U"
+alias brew="env PATH=${PATH//$(pyenv root)\/shims:/} brew"
 
 # Git aliases
 alias gs="git status"
