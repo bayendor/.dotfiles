@@ -12,8 +12,6 @@ Plugin 'gmarik/Vundle.vim'  " let Vundle manage Vundle, required
 " plugin on GitHub repo
 Plugin 'ntpeters/vim-better-whitespace.git'
 Plugin 'kien/ctrlp.vim'
-Plugin 'tpope/vim-dispatch'
-Plugin 'maciakl/vim-neatstatus'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'scrooloose/nerdtree'
@@ -21,11 +19,9 @@ Plugin 'saltstack/salt-vim'
 Plugin 'tpope/vim-bundler'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-commentary'
-Plugin 'elixir-lang/vim-elixir'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-rbenv'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-sensible'
@@ -89,10 +85,8 @@ set number
 if has('gui_running')
   set guifont=Hack:h13
   silent! colorscheme solarized
-  let g:test#strategy = 'iterm'
 else
   silent! colorscheme default
-  let test#strategy = "dispatch"
 endif
 set cursorline
 set mouse=a
