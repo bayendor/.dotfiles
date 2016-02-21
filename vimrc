@@ -85,6 +85,7 @@ set number
 if has('gui_running')
   set guifont=Hack:h13
   silent! colorscheme solarized
+  set background=light
 else
   silent! colorscheme default
 endif

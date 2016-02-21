@@ -33,8 +33,7 @@ git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 export -f parse_git_branch
 
-export EDITOR="/usr/local/bin/mate -w"
-export EDITOR="/usr/local/bin/atom -w"
+export EDITOR="/usr/local/bin/subl -w"
 
 # ignore duplicates and spaced command in history
 export HISTCONTROL=ignoreboth
