@@ -54,10 +54,10 @@ export CFLAGS="-I$(brew --prefix openssl)/include"
 export LDFLAGS="-L$(brew --prefix openssl)/lib"
 
 # suport for docker-machine
-export DOCKER_TLS_VERIFY="1"
-export DOCKER_HOST="tcp://192.168.99.100:2376"
-export DOCKER_CERT_PATH="/Users/David/.docker/machine/machines/dev"
-export DOCKER_MACHINE_NAME="dev"
+# export DOCKER_TLS_VERIFY="1"
+# export DOCKER_HOST="tcp://192.168.99.100:2376"
+# export DOCKER_CERT_PATH="/Users/David/.docker/machine/machines/dev"
+# export DOCKER_MACHINE_NAME="dev"
 
 # command aliases
 alias ls='ls -FG'                   # show colors and added symbols
