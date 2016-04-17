@@ -83,7 +83,7 @@ map <C-l> <C-w>l
 set t_Co=256
 set number
 if has('gui_running')
-  set guifont=Monaco:h13
+  set guifont=Menlo:h13
   silent! colorscheme solarized
   set background=light
 else
