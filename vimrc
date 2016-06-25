@@ -123,9 +123,6 @@ nnoremap <silent> <leader>dw :StripWhitespace<cr>
 " Reindent entire file
 nnoremap <silent> <leader>e :call Preserve("normal! gg=G")<cr>
 
-" Run ruby when typing <leader>r
-nnoremap <leader>r :w<cr> :exec '!ruby' shellescape(@%, 1)<cr>
-
 " Bubble single lines
 nmap <C-Up> [e
 nmap <C-Down> ]e
