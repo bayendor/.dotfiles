@@ -5,11 +5,9 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'  " let Vundle manage Vundle, required
-
-" The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
+
+Plugin 'gmarik/Vundle.vim'  " let Vundle manage Vundle, required
 Plugin 'ntpeters/vim-better-whitespace.git'
 Plugin 'kien/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
@@ -29,7 +27,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'janko-m/vim-test'
 
-call vundle#end()            " required
+call vundle#end()         " required
 
 " Brief help
 " :PluginList       - lists configured plugins
@@ -83,7 +81,7 @@ map <C-l> <C-w>l
 set t_Co=256
 set number
 if has('gui_running')
-  set guifont=Menlo:h13
+  set guifont=Hack:h13
   silent! colorscheme solarized
   set background=light
 else
