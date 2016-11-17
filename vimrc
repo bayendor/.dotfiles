@@ -46,7 +46,7 @@ set nrformats=       " treat all #'s as decimal
 
 " Whitespace
 set nowrap                      " don't wrap lines
-set ts=2 sts=2 sw=2 expandtab   " a tab is two spaces
+set ts=4 sts=2 sw=2 expandtab   " a tab is two spaces
 set backspace=indent,eol,start  " backspace in insert mode
 
 "" Searching
@@ -87,6 +87,7 @@ if has('gui_running')
   set background=light
 else
   silent! colorscheme default
+  set background=dark
 endif
 set cursorline
 set mouse=a
