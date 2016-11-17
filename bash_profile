@@ -75,7 +75,7 @@ alias tmaftp='ftp 192.183.189.126'
 alias be='bundle exec'
 
 # Python aliases
-alias pipup="pip list --outdated | cut -d ' ' -f1 | xargs -n1 pip install -U"
+alias pipup="pip list --format=legacy --outdated | cut -d ' ' -f1 | xargs -n1 pip install -U"
 alias brew="env PATH=${PATH//$(pyenv root)\/shims:/} brew"
 
 # Git aliases
