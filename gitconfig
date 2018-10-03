@@ -16,6 +16,7 @@
   hist = log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short
   authors = ! git log --format=\"%ae %an\" | sort -u | column -t
   mt = mergetool -t opendiff
+	up = pull --rebase --autostash
 [core]
 	editor = vim
 	excludesfile = /Users/David/.gitignore_global
