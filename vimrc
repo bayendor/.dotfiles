@@ -8,14 +8,17 @@ call vundle#begin()
 " Keep Plugin commands between vundle#begin/end.
 
 Plugin 'gmarik/Vundle.vim'  " let Vundle manage Vundle, required
-Plugin 'ntpeters/vim-better-whitespace.git'
-Plugin 'kien/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'Glench/Vim-Jinja2-Syntax'
-Plugin 'scrooloose/nerdtree'
-Plugin 'saltstack/salt-vim'
-Plugin 'tpope/vim-bundler'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'elixir-editors/vim-elixir'
+Plugin 'fatih/vim-go'
+Plugin 'Glench/Vim-Jinja2-Syntax'
+Plugin 'janko-m/vim-test'
+Plugin 'kien/ctrlp.vim'
+Plugin 'ntpeters/vim-better-whitespace.git'
+Plugin 'saltstack/salt-vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
@@ -25,8 +28,6 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
-Plugin 'janko-m/vim-test'
-Plugin 'fatih/vim-go'
 
 call vundle#end()         " required
 
