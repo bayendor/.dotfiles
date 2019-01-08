@@ -1,10 +1,10 @@
-# source .bashrc as needed
-# if [ -f ~/.bashrc ]; then
-#    source ~/.bashrc
-# fi
-
 # proper path ordering for bin files
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH:/usr/lib"
+
+# bash-completion (brew install bash-completion@2)
+if [ -f /usr/local/share/bash-completion/bash_completion ]; then
+  . /usr/local/share/bash-completion/bash_completion
+fi
 
 # support for rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -45,22 +45,9 @@ export HISTCONTROL=ignoreboth
 export CLICOLOR=1
 export PS1="\[\033[36m\][\w]\[\033[33m\]\$(parse_git_branch)\[\033[00m\] \n\$\[\033[00m\] "
 
-# opens short URLs in browser
-function op { open http://$1; }
-
-# environment variables
-# export LC_CTYPE=en_US.UTF-8
-# export LANG=en_US.UTF-8
-
 # homebrew openssl support
 export CFLAGS="-I$(brew --prefix openssl)/include"
 export LDFLAGS="-L$(brew --prefix openssl)/lib"
-
-# suport for docker-machine
-# export DOCKER_TLS_VERIFY="1"
-# export DOCKER_HOST="tcp://192.168.99.100:2376"
-# export DOCKER_CERT_PATH="/Users/David/.docker/machine/machines/dev"
-# export DOCKER_MACHINE_NAME="dev"
 
 # command aliases
 alias ls='ls -FG'                   # show colors and added symbols
@@ -68,7 +55,6 @@ alias la='ls -a'                    # show hidden
 alias lg='ls -g -h'                 # show details
 alias l="ls -lFGgohq"               # fancy ls
 alias grep='grep -n --color=auto'   # adds color, line number
-alias tmaftp='ftp 192.183.189.126'
 alias be='bundle exec'
 alias tf='terraform'
 
@@ -82,6 +68,20 @@ alias gc="git checkout"
 
 # directory aliases
 alias ws='cd ~/workspace'
-alias tma='cd ~/workspace/tma'
 alias pv='cd ~/workspace/dev/peertopeer/practical_vim'
 alias exio='cd ~/workspace/dev/exercism/ruby'
+
+#AWSume alias to source the AWSume script
+alias awsume=". \$(pyenv which awsume)"
+
+#Auto-Complete function for AWSume
+_awsume() {
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    opts=$(awsumepy --rolesusers)
+    COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+    return 0
+}
+complete -F _awsume awsume
