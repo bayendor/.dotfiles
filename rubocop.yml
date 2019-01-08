@@ -7,7 +7,7 @@ Style/GlobalVars:
 Style/SpecialGlobalVars:
   Enabled: false
 
-Style/OpMethod:
+Naming/BinaryOperatorParameterName:
   Enabled: false
 
 Style/GuardClause:
